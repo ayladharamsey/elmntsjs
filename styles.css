@@ -1,0 +1,25 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: Roboto, sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+    color: #009B00;
+}
+
+h2 {
+    font-family: Roboto, sans-serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-top: 7px;
+    color: #009B00;
+}
+
+.component-block {
+    background-color: #DCDCDC;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+}

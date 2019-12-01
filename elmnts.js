@@ -14,7 +14,7 @@ class ELMNTS
                     } catch(e){
                         this.data[elmnt.id] = elmnt.textContent
                     }
-                } else {
+                } else { 
                     this.data[elmnt.id] = null;
                 }
             }    

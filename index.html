@@ -8,11 +8,25 @@
   <script src="elmnts.js"></script>
   <script src="elementLibrary.js"></script>
   <script>
-      elmnts.setPointer('ActiveBot', elmnts.data.Bots[5])
+      elmnts.setPointer('ActiveBot', elmnts.data.Bots[5]) // because of this 5, the input has a placeholder of 5 upon reload, if i delete it out the placeholder says 'undefined'
   </script>
-</head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet"></head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
 <body>
-    <e-input data-src="ActiveBot.index"></e-input>
-    <e-table data-src="Bots"></e-table>
+  <h1> Components List</h1>
+  <div class="component-block">
+    <h2> Single-Line Input Component </h2>
+    <e-input data-src="ActiveBot.index"></e-input> 
+    <!-- why do we want a datasource in this input? -->
+  </div>
+  <div class="component-block">
+      <h2> Multi-Line Input Component </h2>
+      <multi-input></multi-input>
+    </div>
+  <div class="component-block">
+    <h2> Table Component </h2>
+    <!-- <e-table data-src="Bots"></e-table> -->
+  </div>
 </body>
 </html>
