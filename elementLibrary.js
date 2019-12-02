@@ -53,9 +53,7 @@ customElements.define('e-input', class tfeStd extends tfe {
                 font-weight: 700;
                 font-size: 12px;
                 letter-spacing: .6px;
-            }
-
-            `
+            }`
         )
     }
 
@@ -68,7 +66,7 @@ customElements.define('e-input', class tfeStd extends tfe {
     }
 })
 
-customElements.define('multi-input', class tfeStd extends tfe {
+customElements.define('multi-input', class MultiInput extends tfe {
     
     constructor(){
         super();
@@ -115,9 +113,7 @@ customElements.define('multi-input', class tfeStd extends tfe {
                 font-weight: 700;
                 font-size: 12px;
                 letter-spacing: .6px;
-            }
-
-            `
+            }`
         )
     }
 
@@ -130,7 +126,7 @@ customElements.define('multi-input', class tfeStd extends tfe {
     }
 })
 
-customElements.define('dropdown', class tfeStd extends tfe {
+customElements.define('e-dropdown', class Dropdown extends tfe {
     
     constructor(){
         super();
@@ -149,7 +145,7 @@ customElements.define('dropdown', class tfeStd extends tfe {
                 font-size: 12px;
                 letter-spacing: .6px;
                 margin-top: 17px;
-            }
+            }s
 
             button:hover{
                 background-color: #009B00;
@@ -158,8 +154,8 @@ customElements.define('dropdown', class tfeStd extends tfe {
             }
 
             select{
-                width: 300px;
-                height: 200px;
+                width: 200px;
+                height: 30px;
                 border: .7px solid #505050; 
                 border-radius: 2px;
                 padding: 5px;
@@ -187,7 +183,7 @@ customElements.define('dropdown', class tfeStd extends tfe {
     }
 })
 
-customElements.define('checkboxes', class tfeStd extends tfe {
+customElements.define('e-checkboxes', class Checkboxes extends tfe {
     
     constructor(){
         super();
@@ -215,8 +211,8 @@ customElements.define('checkboxes', class tfeStd extends tfe {
             }
 
             input{
-                width: 200px;
-                height: 20px;
+                margin-right: 10px;
+                margin-left: 10px;
                 border: .7px solid #505050; 
                 border-radius: 2px;
                 padding: 5px;
@@ -234,15 +230,17 @@ customElements.define('checkboxes', class tfeStd extends tfe {
     get html(){
         return (
             `<h3> CHOOSE FOOD </h3>
-            <input type="checkbox" name="potato" value="Potato"> Potato </input>
-            <input type="checkbox" name="pizza" value="Pizza"> Pizza </input>
-            <input type="checkbox" name="turkey" value="Turkey"> Turkey </input>
+            <div class="check-container"> 
+                <input type="checkbox" name="potato" value="Potato"> Potato </input>
+                <input type="checkbox" name="pizza" value="Pizza"> Pizza </input>
+                <input type="checkbox" name="turkey" value="Turkey"> Turkey </input>
+            </div>
             <button>SUBMIT</button>`
         )
     }
 })
 
-customElements.define('navigation', class tfeStd extends tfe {
+customElements.define('e-navigation', class Navigation extends tfe {
     
     constructor(){
         super();
@@ -251,27 +249,36 @@ customElements.define('navigation', class tfeStd extends tfe {
     get css(){
         return (
             `li{
-                background-color: #505050;
                 font-family: Roboto, sans serif;
                 font-weight: 700;
-                font-size: 12px;
+                font-size: 15px;
+                display: inline;
+                text-decoration: none;
+                margin-right: 10px;
+                color: #009B00;
             }
 
             li:hover{
-                background-color: #009B00;
                 color: #FFFFFF;
             }
 
-            h3{
+            ul{
+                padding: 16px;
+            }
+
+            h1{
                 font-family: Roboto, sans serif;
                 font-weight: 700;
-                font-size: 12px;
+                font-size: 25px;
                 letter-spacing: .6px;
+                color: #009B00;
             }
             
             nav{
                 display: flex;
                 justify-content: space-between;
+                background-color: #505050;
+                padding: 10px 0px 0px 30px;
             }`
         )
     }
@@ -280,7 +287,7 @@ customElements.define('navigation', class tfeStd extends tfe {
         //switch H1 below to an img link once i get access to BPX logo
         return (
             `<nav>
-                <h1> BPX <h1> 
+                <h1> BPX </h1> 
                 <ul>
                     <li> Link1 </li>
                     <li> Link2 </li>
@@ -291,7 +298,7 @@ customElements.define('navigation', class tfeStd extends tfe {
     }
 })
 
-customElements.define('e-table', class tfeTable extends tfe {
+customElements.define('e-table', class ETable extends tfe {
     
     constructor(){
         super();
